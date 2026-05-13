@@ -10,7 +10,7 @@ namespace KINO_Chernyshkov.Pages.Kinoteatr
     public partial class Add : Page
     {
         KinoteatrContext kinoteatr;
-        public Add()
+        public Add(KinoteatrContext kinoteatr  = null)
         {
             InitializeComponent();
 
@@ -23,6 +23,7 @@ namespace KINO_Chernyshkov.Pages.Kinoteatr
                 bthAdd.Content = "Изменить";
             }
 
+            this.kinoteatr = kinoteatr;
         }
 
         private void AddRecord(object sender, RoutedEventArgs e)
@@ -56,6 +57,7 @@ namespace KINO_Chernyshkov.Pages.Kinoteatr
                 );
                 newKinoteatr.Add();
                 MessageBox.Show("Запись успешно добавлена.");
+                
             }
             else
             {
@@ -68,6 +70,7 @@ namespace KINO_Chernyshkov.Pages.Kinoteatr
                 kinoteatr.Update();
                 MessageBox.Show("Запись успешно обновлена.");
             }
+            MainWindow.init.OpenPage(new Pages.Kinoteatr.Main());
 
         }
 
