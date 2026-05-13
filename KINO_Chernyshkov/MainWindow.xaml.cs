@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using KINO_Chernyshkov.Classes;
+using KINO_Chernyshkov.Modell;
 
 namespace KINO_Chernyshkov
 {
@@ -23,6 +25,9 @@ namespace KINO_Chernyshkov
         public MainWindow()
         {
             InitializeComponent();
+
+
+            new KinoteatrContext(0, "test", 12, 12).Add();
         }
     }
 }
