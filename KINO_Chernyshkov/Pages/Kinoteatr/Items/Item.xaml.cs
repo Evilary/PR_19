@@ -13,28 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using KINO_Chernyshkov.Classes;
-using KINO_Chernyshkov.Modell;
 
-namespace KINO_Chernyshkov
+namespace KINO_Chernyshkov.Pages.Kinoteatr.Items
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Item.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Item : UserControl
     {
-
-        public static MainWindow init;
-        public MainWindow()
+        public Item(KinoteatrContext Kinoteatr)
         {
             InitializeComponent();
-            OpenPage(new Pages.Kinoteatr.Main());
 
-            init = this;
-        }
+            name.Text = Kinoteatr.Name;
+            countZal.Text = Kinoteatr.CountZal.ToString();
+            count.Text = Kinoteatr.Count.ToString();
 
-        public void OpenPage(Page Page)
-        {
-            frame.Navigate(Page);
         }
     }
 }
