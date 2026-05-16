@@ -56,7 +56,7 @@ namespace KINO_Chernyshkov.Classes
 
         public void Update()
         {
-            string SQL = "UPDATE + " +
+            string SQL = "UPDATE " +
                 "`kinoteatr`" +
                 " SET "+
                     $"`name`='{this.Name}'," +

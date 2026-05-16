@@ -28,13 +28,18 @@ namespace KINO_Chernyshkov.Pages.Kinoteatr
 
             foreach (KinoteatrContext item in AllKinoteatrs)
             {
-                parent.Children.Add(new Items.Item(item));
+                parent.Children.Add(new Items.Item(item,this));
             }
         }
 
         private void AddRecord(object sender, RoutedEventArgs e)
         {
             MainWindow.init.OpenPage(new Pages.Kinoteatr.Add());
+        }
+
+        private void OpenAfisha(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.OpenPage(new Pages.Afisha.Main());
         }
     }
 }
