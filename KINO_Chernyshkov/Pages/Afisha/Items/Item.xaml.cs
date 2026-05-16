@@ -16,7 +16,9 @@ namespace KINO_Chernyshkov.Pages.Afisha.Items
 
             idKinoteatr.Text = Afisha.IdKinoteatr.ToString();
             name.Text = Afisha.Name;
-            timePrice.Text = Afisha.Time.ToString("dd.MM.yyyy HH:mm") + " | " + Afisha.Price;
+            date.Text = Afisha.Time.ToString("dd.MM.yyyy");
+            time.Text = Afisha.Time.ToString("HH:mm");
+            price.Text = Afisha.Price.ToString();
 
             this.Afisha = Afisha;
             this.main = main;

@@ -46,7 +46,7 @@ namespace KINO_Chernyshkov.Classes
                 "VALUES (" +
                     $"{this.IdKinoteatr}, " +
                     $"'{this.Name}', " +
-                    $"'{this.Time}', " +
+                    $"'{this.Time.ToString("yyyy-MM-dd HH:mm:ss")}', " +
                     $"{this.Price})";
             MySqlConnection connection = Connection.OpenConnection();
             Connection.Query(SQL, connection);
@@ -60,8 +60,8 @@ namespace KINO_Chernyshkov.Classes
                 "SET " +
                     $"`id_kinoteatr`={this.IdKinoteatr}, " +
                     $"`name`='{this.Name}', " +
-                    $"`time`='{this.Time}', " +
-                    $"`price`='{this.Price}' " +
+                    $"`time`='{this.Time.ToString("yyyy-MM-dd HH:mm:ss")}', " +
+                    $"`price`={this.Price} " +
                 "WHERE " +
                     $"`id`='{this.Id}';";
             MySqlConnection connection = Connection.OpenConnection();

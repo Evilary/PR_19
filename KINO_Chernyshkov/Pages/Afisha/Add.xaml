@@ -26,8 +26,9 @@
                 <ComboBox x:Name="kinoteatr" Height="25" Grid.Column="1" Margin="10,36,10,0" VerticalAlignment="Top"/>
                 <Label Content="Фильм:" Grid.Column="1" VerticalAlignment="Top" Margin="10,66,10,0"/>
                 <TextBox x:Name="name" Height="25" Grid.Column="1" Margin="10,92,10,0" VerticalAlignment="Top"/>
-                <Label Content="Дата/время сеанса:" Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0"/>
-                <TextBox x:Name="time" Height="25" Grid.Column="2" Margin="10,36,10,0" VerticalAlignment="Top"/>
+                <Label Content="Дата сеанса:" Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0"/>
+                <DatePicker x:Name="date" Height="25" Grid.Column="2" Margin="10,36,135,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="time" Height="25" Grid.Column="2" Margin="200,36,10,0" VerticalAlignment="Top" ToolTip="ЧЧ:мм"/>
                 <Label Content="Стоимость билета:" Grid.Column="2" VerticalAlignment="Top" Margin="10,66,10,0"/>
                 <TextBox x:Name="price" Height="25" Grid.Column="2" Margin="10,92,10,0" VerticalAlignment="Top"/>
             </Grid>
