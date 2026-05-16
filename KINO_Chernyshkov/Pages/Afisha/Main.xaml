@@ -8,13 +8,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Main">
 
-    <Grid>
-        <ScrollViewer Margin="5,5,5,32">
+    <DockPanel>
+        <Grid DockPanel.Dock="Bottom" Height="40">
+            <Button Click="AddRecord" Content="Добавить" Height="25" Width="100" Background="#ff73e618" BorderBrush="#ff73e618" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center"/>
+        </Grid>
+        <ScrollViewer Margin="5">
             <StackPanel x:Name="parent">
 
             </StackPanel>
         </ScrollViewer>
-        <Button Click="AddRecord" Content="Добавить" Height="25" Margin="641,350,0,0" HorizontalAlignment="Left" Width="100" Background="#ff73e618" BorderBrush="#ff73e618" VerticalAlignment="Top"/>
-        <Button Click="OpenKinoteatr" Content="Кинотеатры" Height="25" Margin="533,350,0,0" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top"/>
-    </Grid>
+    </DockPanel>
 </Page>

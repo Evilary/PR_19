@@ -23,10 +23,5 @@ namespace KINO_Chernyshkov.Pages.Afisha
         {
             MainWindow.init.OpenPage(new Pages.Afisha.Add());
         }
-
-        private void OpenKinoteatr(object sender, RoutedEventArgs e)
-        {
-            MainWindow.init.OpenPage(new Pages.Kinoteatr.Main());
-        }
     }
 }

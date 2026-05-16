@@ -36,5 +36,9 @@ namespace KINO_Chernyshkov
         {
             frame.Navigate(Page);
         }
+
+        private void OpenKino(object sender, RoutedEventArgs e) => OpenPage(new Pages.Kinoteatr.Main());
+
+        private void OpenAfisha(object sender, RoutedEventArgs e) => OpenPage(new Pages.Afisha.Main());
     }
 }

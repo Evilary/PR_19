@@ -10,21 +10,29 @@
 
     <Grid Background="Gainsboro">
         <Grid Margin="20" Background="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100px"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Source="/Images/ic-kino.png"/>
-            <Label Content="Наименование:" Grid.Column="1" VerticalAlignment="Top" Margin="10"/>
-            <TextBox x:Name="name" Height="25" Grid.Column="1" Margin="10,36,10,0" VerticalAlignment="Top"/>
-            <Label Content="Количество залов:" Grid.Column="1" VerticalAlignment="Top" Margin="10,66,10,0"/>
-            <TextBox x:Name="countZal" Height="25" Grid.Column="1" Margin="10,92,10,0" VerticalAlignment="Top"/>
-            <Label Content="Количество:" Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0"/>
-            <TextBox x:Name="count" Height="25" Grid.Column="2" Margin="10,36,10,0" VerticalAlignment="Top"/>
-            <Button x:Name="bthAdd" Click="AddRecord" Content="Добавить" Height="25" Grid.Column="2" Margin="0,92,10,0" HorizontalAlignment="Right" Width="100" Background="#ff73e618" BorderBrush="#ff73e618" VerticalAlignment="Top"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Source="/Images/ic-kino.png"/>
+                <Label Content="Наименование:" Grid.Column="1" VerticalAlignment="Top" Margin="10"/>
+                <TextBox x:Name="name" Height="25" Grid.Column="1" Margin="10,36,10,0" VerticalAlignment="Top"/>
+                <Label Content="Количество залов:" Grid.Column="1" VerticalAlignment="Top" Margin="10,66,10,0"/>
+                <TextBox x:Name="countZal" Height="25" Grid.Column="1" Margin="10,92,10,0" VerticalAlignment="Top"/>
+                <Label Content="Количество:" Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0"/>
+                <TextBox x:Name="count" Height="25" Grid.Column="2" Margin="10,36,10,0" VerticalAlignment="Top"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Button x:Name="bthAdd" Click="AddRecord" Content="Добавить" Height="25" Width="100" Background="#ff73e618" BorderBrush="#ff73e618" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center"/>
+            </Grid>
         </Grid>
-
-
     </Grid>
 </Page>
